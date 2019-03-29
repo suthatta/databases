@@ -1,7 +1,7 @@
 # Homework week 1
 ```
-Write a node-JS program to
-1. create a database world
+Using MySQL-client 
+1. create a database new_world
 2. create a table country
 3. create a table city 
 4. Insert 10-20 rows in each table with relevant fields. 
@@ -9,7 +9,7 @@ Write a node-JS program to
 Choose the fields/columns such that you should be able to answer the following queries:
 (Queries 6-10 are bonus queries and require the knowledge of joins, group by and having clauses)
 
-Write a node-JS program to query (using select statements) the world database to answer following questions
+Import the database world (using the world.sql-file), then query (using select statements) the world database to answer following questions
 1. What are the names of countries with population greater than 8 million
 2. What are the names of countries that have “land” in their names ?
 3. What are the names of the cities with population in between 500,000 and 1 million ?
