@@ -4,7 +4,8 @@
 
 ### About
 
-This three-week program aims to introduce the fundamental concepts of databases using MySQL.
+This three-week program aims to introduce the fundamental concepts of databases using MySQL, and are split into two parts.
+First part consists of the theory of databases, and the second part is designing a todo-application. 
 
 ### Key Objectives
 
@@ -18,12 +19,12 @@ By the end of this module, students should have a familiarity with and basic und
 
 ## Lesson Plan
 
-### Lesson 1: MySQL and Node Setup! Create, Insert and Select !
+### Lesson 1: MySQL ! Create, Insert and Select & Joins !
 
-Objective: This class aims to incorporate JavaScript code to operate the MySQL database.
-MySQL client can be used to demonstrate SQL queries however, students should know how to
-make a MySQL database connection from JavaScript, run queries from JavaScript and
-capture results of queries in JavaScript.
+Objective: This class aims to introduce the students to operate the MySQL database.
+MySQL client can be used control the database instance and to demonstrate SQL queries.
+The class will look at working with data, doing inserts, updates and deletes.
+Normalisation and selects using joins will be discussed.
 
 ### Lesson 2: Group by, Having and Joins. Promisification of JS client with prepared statements
 
@@ -31,10 +32,13 @@ Objective: This class introduces more clauses (group by, having) in the
 select statement. MySQL joins (inner, self, left and right) should be explained
 with demonstration (Employee table with **reportsTo** field and Department
 table with its PK in Employee table is suitable for this demonstration).
+
 Promise based JavaScript program with SQL prepared statements should be
 understood by students. The program can be found in the Week2 folder (Credits:
 @remarcmij)
 
+This class also introduces more clauses (group by, having) in the select statement. 
+MySQL joins (inner, self, left and right) should be explained with demonstration
 ### Lesson 3: Database design, normal forms, SQL injection
 
 Objective: This class invites students to discuss Entity Relationship Diagram (ERD).
