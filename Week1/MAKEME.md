@@ -22,3 +22,4 @@ Import the database world (using the world.sql-file), then query (using select s
 10. What is the population of the world ?
 
 ```
+Homework should be handed in as a text-file with the queries and results (either in one big file, or as separate files)
