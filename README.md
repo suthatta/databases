@@ -37,8 +37,6 @@ Promise based JavaScript program with SQL prepared statements should be
 understood by students. The program can be found in the Week2 folder (Credits:
 @remarcmij)
 
-This class also introduces more clauses (group by, having) in the select statement. 
-MySQL joins (inner, self, left and right) should be explained with demonstration
 ### Lesson 3: Database design, normal forms, SQL injection
 
 Objective: This class invites students to discuss Entity Relationship Diagram (ERD).
