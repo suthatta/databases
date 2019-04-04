@@ -25,6 +25,8 @@ Objective: This class aims to introduce the students to operate the MySQL databa
 MySQL client can be used control the database instance and to demonstrate SQL queries.
 The class will look at working with data, doing inserts, updates and deletes.
 Normalisation and selects using joins will be discussed.
+Concepts of database transaction, ACID properties, normal forms should be introduced with
+examples / live coding (creating a transaction, committing and rollback-ing).
 
 ### Lesson 2: Group by, Having and Joins. Promisification of JS client with prepared statements
 
@@ -37,13 +39,15 @@ Promise based JavaScript program with SQL prepared statements should be
 understood by students. The program can be found in the Week2 folder (Credits:
 @remarcmij)
 
-### Lesson 3: Database design, normal forms, SQL injection
-
-Objective: This class invites students to discuss Entity Relationship Diagram (ERD).
+This class invites students to discuss Entity Relationship Diagram (ERD).
 Students should be able to explain their choices of entities, relationships, attributes etc.
-SQL injection should be explained with a demonstration (with a simple JS client).
-Concepts of database transaction, ACID properties, normal forms should be introduced with
-examples / live coding (creating a transaction, committing and rollback-ing).
+SQL injection should be explained. 
+
+### Homework 3: Application development
+
+The goal is that the students should be able to design a web-based todo-application, using MySQL as a backend. 
+The application should handle authenthication, task-creation, tagging tasks etc. More information is found in [Week3/MAKEME.md](https://github.com/foocoding/databases/blob/master/Week3/MAKEME.md)
+
 
 ## Handing in homework
 Take a look at [this video](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) made by Daan, he explains how your homework needs to be handed in.

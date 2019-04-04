@@ -1,12 +1,18 @@
 # Lesson 2: Group by, Having and Joins. Promisification of JS client with prepared statements
 
 Objective: This class introduces more clauses (group by, having) in the
-select statement. MySQL joins (inner, self, left and right) should be explained
-with demonstration (Employee table with **reportsTo** field and Department
-table with its PK in Employee table is suitable for this demonstration).
+select statement. MySQL joins (inner, self, left and right) are further 
+discussed and should be explained with demonstration (Employee table with 
+**reportsTo** field and Department table with its PK in Employee table is 
+suitable for this demonstration).
+
 Promise based JavaScript program with SQL prepared statements should be
 understood by students. The program can be found in the Week2 folder (Credits:
 @remarcmij)
+
+This class invites students to discuss Entity Relationship Diagram (ERD).
+Students should be able to explain their choices of entities, relationships, attributes etc.
+SQL injection should be explained.
 
 ## Pre-Class Readings
 

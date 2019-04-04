@@ -1,13 +1,17 @@
 # Lesson 1: MySQL and Node setup! Create, Insert and Select !
 
-Objective : This class aims to incorporate JavaScript code to operate the MySQL database.
-MySQL client can be used to demonstrate SQL queries however, students should know how to
-make a MySQL database connection from JavaScript, run queries from JavaScript and
-capture results of queries in JavaScript.
+Objective: This class aims to introduce the students to operate the MySQL database.
+MySQL client can be used control the database instance and to demonstrate SQL queries.
+The class will look at working with data, doing inserts, updates and deletes.
+Normalisation and selects using joins will be discussed.
+Concepts of database transaction, ACID properties, normal forms should be introduced with
+examples / live coding (creating a transaction, committing and rollback-ing).
 
 ## Pre-Class Preparation
 - Install MySQL using the following [official docs](https://dev.mysql.com/downloads/mysql/)
-- MAC users may use `brew install mysql`
+-- preferably 5.7, there's currently some issues with 8.0 
+- Install MySQL Workbench (graphical client, optional)
+**Make a note of the root password either given to you or set by you during the installation**
 
 Before arriving to class on Sunday, please watch all of the videos in [this video playlist](https://www.lynda.com/SharedPlaylist/0299ced540444d7197460e7f1f74ddab) on Lynda.
 If you actually manage to watch them all and understand everything,
@@ -16,12 +20,16 @@ then you are a database expert.
 ## Setup
 
 ### MySQL setup
-This setup assumes MySQL version 8.0.
-Windows users should use **Microsoft MySQL Command Line** client.
-Linux and MAC users should use **gnome-terminal** and **Terminal** respectively.
+This setup assumes MySQL version 5.7.
+- Windows users should use **Microsoft MySQL Command Line** client.
+- Linux and MAC users should use **gnome-terminal** and **Terminal** respectively. 
+
 **Microsoft MySQL Command Line** client gives you a **msql>** prompt after typing in your root password.
 Note that this password is the one you used for root user of the mysql.
-Linux and MAC users can execute `mysql -uroot -p` and then type the password.
+Linux and MAC users can execute `/usr/local/mysql/bin/mysql -uroot -p` and then type the password.
+   For this go more smoothly, you can add the path to your mysql-binary to your 'PATH' environment variable, 
+   i.e. the line
+   export PATH=$PATH:/usr/local/mysql/bin/
 Following commands should be run under the **mysql>** prompt:
 ```
 mysql> create user ‘hyfuser’@‘localhost’ identified with mysql_native_password by ‘hyfpassword’;
