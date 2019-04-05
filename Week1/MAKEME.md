@@ -9,7 +9,8 @@ Using MySQL-client
 Choose the fields/columns such that you should be able to answer the following queries:
 (Queries 6-10 are bonus queries and require the knowledge of joins, group by and having clauses)
 
-Import the database **new_world** (using the new_world.sql-file), then query (using select statements) the world database to answer following questions
+Import the database **new_world** (using the new_world.sql-file), 
+then query (using select statements) the **new_world** database to answer following questions
 1. What are the names of countries with population greater than 8 million
 2. What are the names of countries that have “land” in their names ?
 3. What are the names of the cities with population in between 500,000 and 1 million ?
@@ -22,5 +23,13 @@ Import the database **new_world** (using the new_world.sql-file), then query (us
 10. What is the population of the world ?
 
 ```
+# Importing a MySQL-dump into an instance:
+- in a console, change directory to the Week1 directory. Then type 
+    mysql < new_world.sql
+- in MySQL Workbench, do
+    click "Server" -> "Data Import"
+    choose "Import from self-contained file", and browse to the Week1/new_world.sql-file
+    click "Start import"
+
 Homework should at least be handed in as a text-file with the sql-queries and results (either in one big file, or as separate files)
 or, as preparation for the next steps of the course, by writing a node-JS program, that creates the database (step 1) and run the queries (step 2) 
