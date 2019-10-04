@@ -16,10 +16,16 @@ By the end of this module, students should have a familiarity with and basic und
 - The Structured Query Language (SQL)
 - The construction of a database system
 - MySQL as an example of a relational database system
+- SQL vs NoSQL
+
+### Preparations
+
+As the base for this module, we'll use MySQL 5.7, since there's currently some issues with the js-module or 8.0.
+See Week1-preparations for instructions on how to install.
 
 ## Lesson Plan
 
-### Lesson 1: MySQL ! Create, Insert and Select & Joins !
+### Lesson 1: SQL ! Create, Insert and Select & Joins !
 
 Objective: This class aims to introduce the students to operate the MySQL database.
 MySQL client can be used control the database instance and to demonstrate SQL queries.

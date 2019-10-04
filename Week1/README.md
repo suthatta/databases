@@ -9,9 +9,9 @@ examples / live coding (creating a transaction, committing and rollback-ing).
 
 ## Pre-Class Preparation
 - Install MySQL using the following [official docs](https://dev.mysql.com/downloads/mysql/)
--- **5.7**, there's currently some issues with 8.0 
-- Install MySQL Workbench (graphical client, optional)
-**Make a note of the root password either given to you or set by you during the installation**
+-- **5.7**, there's currently some issues with 8.0
+- Install MySQL Workbench (graphical client, optional) <br>
+*Make a note of the root password either given to you or set by you during the installation*
 
 Before arriving to class on Sunday, please watch all of the videos in [this video playlist](https://www.lynda.com/SharedPlaylist/0299ced540444d7197460e7f1f74ddab) on Lynda.
 If you actually manage to watch them all and understand everything,
@@ -22,14 +22,19 @@ then you are a database expert.
 ### MySQL setup
 This setup assumes MySQL version 5.7.
 - Windows users should use **Microsoft MySQL Command Line** client.
-- Linux and MAC users should use **gnome-terminal** and **Terminal** respectively. 
+- Linux and MAC users should use **gnome-terminal** and **Terminal** respectively.
 
 **Microsoft MySQL Command Line** client gives you a **mysql>** prompt after typing in your root password.
 Note that this password is the one you used for root user of the mysql.
-Linux and MAC users can execute `/usr/local/mysql/bin/mysql -uroot -p` and then type the password.
-   For this go more smoothly, you can add the path to your mysql-binary to your 'PATH' environment variable, 
-   i.e. the line
-   export PATH=$PATH:/usr/local/mysql/bin/
+Linux and MAC users can execute <br>
+`/usr/local/mysql/bin/mysql -uroot -p` <br>
+and then type the password.
+
+   For this go more smoothly, you can add the path to your mysql-binary to your 'PATH' environment variable,
+   i.e. the line <br>
+   export PATH=$PATH:/usr/local/mysql/bin/ <br>
+   in your profile. Note that how to do this depends on your operating system.
+
 Following commands should be run under the **mysql>** prompt:
 ```
 mysql> create user ‘hyfuser’@‘localhost’ identified with mysql_native_password by ‘hyfpassword’;
@@ -46,11 +51,12 @@ This command creates a database 'userdb'
 
 ### Node setup
 This setup assumes that you have Node.js 0.6 or higher.
-We use **mysqljs** driver which can be installed using `npm install mysql`
+We use **mysqljs** driver which can be installed using <br>
+`npm install mysql`
 
 ### Verification of the correct setup
 Run `node connection-test.js` from VScode(Windows) or the terminal(Linux or MAC).
-The output should be `The solution is:  2`.
+The output should be `The solution is:  2`. <br>
 connection-test.js can be found in the Week1 folder.
 
 In this class, students will be introduced to
@@ -68,33 +74,35 @@ retrieve data from tables using SELECT statements that include FROM, WHERE claus
 
 ### What is a Database ?
 * Definition : Organized collection of data and rules about its manipulation
-* Client-server architecture : E.g. (Relational) DBMS
-* Files as database
-* Data structure/object as database
-```js
-const capitals = [
-  "Amsterdam",
-  "Delhi",
-  "Damascus",
-  "Madrid"];
-```
+  * Client-server architecture : e.g. (Relational) DBMS - database server
+  * Files as database
+  * Data structure/object as database
+  ```js
+  const capitals = [
+    "Amsterdam",
+    "Delhi",
+    "Damascus",
+    "Madrid"];
+  ```
 
 ### Relations = Table
 
 * What is a relation (in the following sentences)?
-* Delhi is the capital of India
-* Amsterdam is the capital of Netherlands
-* Damascus is the capital of Syria
+  * Delhi is the capital of India
+  * Amsterdam is the capital of Netherlands
+  * Damascus is the capital of Syria
 
-Dan, 29, works in Amazon and lives in Seattle. His friend Ben who just celebrated
-his 24th birthday works in Facebook and lives in Redmond.
+  Dan, 29, works at Amazon and lives in Seattle. His friend Ben who just celebrated
+  his 24th birthday works at Facebook and lives in Redmond.
 
 ### DBMS implementations
 
 * **MySQL**
 * PostgreSQL
+* Oracle RDBMS
 * MongoDB (NoSQL)
 * Cassandra (NoSQL)
+* ClickHouse (SQL - column store)
 
 ### MySQL components
 
@@ -104,13 +112,13 @@ his 24th birthday works in Facebook and lives in Redmond.
 
 ### Create a table in MySQL
 
-#### Collection of rows and columns
-#### SYNTAX
+##### Collection of rows and columns
+##### SYNTAX
 ```
 CREATE TABLE table_name (column_name, column_type [, column2_name, column2_type]);
 ```
 
-#### TYPES
+##### Column types
 Recall what a datatype is. js vs mysql types
 
 * INT(N) type
@@ -120,7 +128,7 @@ Recall what a datatype is. js vs mysql types
 ### Fill up a table in MySQL: INSERT rows
 A row (aka record or tuple) represents a single, implicitly structured data item in the table.
 
-#### SYNTAX
+##### SYNTAX
 ```
 INSERT INTO table_name VALUES(value1, value2 [,value3,...]);
 ```
@@ -130,7 +138,7 @@ INSERT INTO table_name VALUES(value1, value2 [,value3,...]);
 
 ### See the content of a table in MySQL: SELECT
 
-#### SYNTAX 
+##### SYNTAX
 ```
 SELECT */column_1,column_2...
 FROM table_1
@@ -156,7 +164,7 @@ The SELECT statement is composed of several clauses:
 ### INSERT and SELECT together
 
 ```
-Example: 
+Example:
 
 INSERT INTO 'employees' ('shop_id', 'gender', 'name', 'salary')
 SELECT 3,
@@ -169,9 +177,9 @@ WHERE  transfer_date > '2008-01-01';
 
 ### Uniqueness and Keys
 
-* Super key : set of columns that uniquely identify a row
-* Candidate key : minimal super key that can uniquely identify a row
-* Primary key : choice of candidate key chosen by database designer : cannot be null
+* Primary key : unique identifier on the data row. Cannot be null, and cannot have any duplicates. Can be created using one or more columns. Should be chosen by the database designer, otherwise chosen automatically by the database, all rows must be uniquely identified
+* Composite key : key spanning multiple columns
+* Foreign key (parent / child keys) : key referencing column(s) in another table
 
 ## Reference Material
 
