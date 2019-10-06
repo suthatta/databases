@@ -1,5 +1,5 @@
 # Homework week 1
-```
+
 Using MySQL-client 
 1. create a database **world**
 2. create a table country
@@ -22,7 +22,7 @@ then query (using select statements) the **new_world** database to answer follow
 9. What's the top 10 most populated cities?
 10. What is the population of the world ?
 
-```
+
 # Importing a MySQL-dump into an instance:
 - in a console, change directory to the Week1 directory. Then type 
     mysql < new_world.sql
