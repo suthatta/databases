@@ -310,5 +310,5 @@ create table city
   42
   );
 
-  select count(*) as TotalCountries
+  select count(*) as TotalCities
   from city;
