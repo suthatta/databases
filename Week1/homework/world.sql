@@ -20,7 +20,7 @@ create table country
 drop table if exists city;
 create table city
 (
-  City_Code int(11) NOT NULL
+  City_code int(11) NOT NULL
   AUTO_INCREMENT,
   City_Name varchar
   (35) NOT NULL DEFAULT '', 
@@ -29,7 +29,7 @@ create table city
   City_Population int
   (11) NOT NULL DEFAULT 0,
   primary key
-  (City_Code),
+  (City_code),
   foreign key
   (Country_Code) REFERENCES country
   (Country_Code)
@@ -37,7 +37,7 @@ create table city
 
   /*insert into country (Country_Code,Country_Name,Continent,Region,Capital, Population)  Values*/
   insert into country
-  value('001','Singapo','Asia','Caribbean',
+  value('SIP','Singapo','Asia','Caribbean',
   0
   );
   insert into country
@@ -50,21 +50,21 @@ create table city
   );
   insert into country
   value
-  ('002',
+  ('IND',
   'India',
   'Asia',
   'Middle East',
   0
   );
   insert into country
-  value('003',
+  value('AGT',
   'Argentina',
   'SouthAmerica',
   'SouthAmerica',
   3
   );
   insert into country
-  value('004',
+  value('TKY',
   'Turkey',
   'Europe',
   'Middle East',
@@ -72,70 +72,70 @@ create table city
   );
   insert into country
   value
-  ('005',
+  ('USA',
   'United States',
   'NorthAmerica',
   'NorthAmerica',
   8
   );
   insert into country
-  value('006',
+  value('THA',
   'Thailand',
   'Asia',
   'Asia',
   0
   );
   insert into country
-  value('007',
+  value('SWE',
   'Sweden',
   'Europe',
   'NordicCountries',
   0
   );
   insert into country
-  value('008',
+  value('DNK',
   'Denmark',
   'Europe',
   'NordicCountries',
   0
   );
   insert into country
-  value('009',
+  value('PHL',
   'Philippines',
   'Asia',
   'SoutheastAsia',
   2
   );
   insert into country
-  value('010',
+  value('LOS',
   'Los',
   'Asia',
   'SouthernAsia',
   0
   );
   insert into country
-  value('011',
+  value('SPN',
   'Spain',
   'Europe',
   'Southern Europe',
   0
   );
   insert into country
-  value('012',
+  value('CND',
   'Cannada',
   'SouthAmerica',
   'MiddleEast',
   0
   );
   insert into country
-  value('013',
+  value('CHN',
   'China',
   'Asia',
   'EasternAsia',
   8
   );
   insert into country
-  value('014',
+  value('PER',
   'Peru',
   'SouthAmerica',
   'SouthAmerica',
@@ -146,6 +146,115 @@ create table city
   from country;
 
   /*insert into city   values (City_code,City_Name,Country_Code,City_Population)*/
+  insert into city
+  value
+  (1,
+  'Bangkok',
+  'THA',
+  60
+  );
+  insert into city
+  value
+  (2,
+  'Azabajan',
+  'IND',
+  100
+  );
+  insert into city
+  value
+  (3,
+  'AroiDee',
+  'CND',
+  400
+  );
+  insert into city
+  value(4,
+  'ChiangMai',
+  'AGT',
+  100
+  );
+  insert into city
+  value(5,
+  'Udon',
+  'THA',
+  158
+  );
+
+  insert into city
+  value(9,
+  'WhiteHarbor',
+  'NDL',
+  800
+  );
+  insert into city
+  value(13,
+  'Stockholm',
+  'SWE',
+  748
+  );
+  insert into city
+  value(14,
+  'Mantarys',
+  'SWE',
+  90
+  );
+  insert into city
+  value(15,
+  'Malmo',
+  'SWE',
+  79
+  );
+  insert into city
+  value(16,
+  'KingInTheNorr',
+  'NDL',
+  569
+  );
+  insert into city
+  value(17,
+  'Landstring',
+  'CHN',
+  68
+  );
+  insert into city
+  value(18,
+  'Vasterland',
+  'CHN',
+  28
+  );
+  insert into city
+  value(19,
+  'ChingChing',
+  'PER',
+  124
+  );
+  insert into city
+  value(20,
+  'PingPong',
+  'PER',
+  99
+  );
+  insert into city
+  value(21,
+  'Vinterfall',
+  'SPN',37
+  );
+  insert into city
+  value(22,
+  'KingsLanding',
+  'PER',
+  95
+  );
+  insert into city
+  value(23,
+  'CasterlyRock',
+  'USA',
+  12
+  );
 
   select count(*) as TotalCities
   from city;
+
+  select country.Country_Name, city.Country_Code, city.City_Name
+  from country, city
+  where country.Country_Code= city. Country_Code;
