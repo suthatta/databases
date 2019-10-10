@@ -6,7 +6,7 @@ show tables;
 drop table if exists country;
 create table country
 (
-  Country_Code int(3) NOT NULL
+  Country_Code int(2) NOT NULL
   AUTO_INCREMENT,
   Country_Name varchar
   (30) NOT NULL DEFAULT '',
@@ -25,10 +25,12 @@ show tables;
   drop table if exists city;
   create table city
   (
-    City_Code int(3) NOT NULL unique,
-    City_Name varchar (30) NOT NULL DEFAULT '',
-    Country_Code int(3) NOT NULL
+    City_Code int(2) NOT NULL
     AUTO_INCREMENT,
+  City_Name varchar
+    (30) NOT NULL DEFAULT '', 
+  Country_Code int
+    (2) NOT NULL,
   City_Population int
     (11) NOT NULL DEFAULT 0,
   primary key
@@ -254,3 +256,5 @@ show tables;
     from country, city
     where country.Country_Code= city. Country_Code
     order by Country_Code;
+
+ 
